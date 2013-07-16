@@ -34,7 +34,7 @@ if(bool) {
 Functions in tran almost mock coffeescript. Also the `return` keyword is `<-`.
 ``` javascript
 function_name = (parameters) -> {
-  -> return_value;
+  <- return_value;
 }
 ```
 Converts(although akwardly) to:
