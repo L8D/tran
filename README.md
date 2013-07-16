@@ -59,7 +59,7 @@ Will look like:
 ``` javascript
 object_name = {
   "method_name": function() { return "returned value from the method"; },
-  attribute = 10
+  "attribute" = 10
 }
 
 object_name.attribute // returns 10
@@ -68,7 +68,7 @@ object_name.method_name() // returns "returned value from the method"
 
 ### Loops and Breaks (^ /)
 Because anything other than while loops are for sissies.
-``` javascript
+```
 bool ^ {
   // will be rerun until bool == false or loop is broken
   some_condition ? /;
