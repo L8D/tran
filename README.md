@@ -81,3 +81,20 @@ while(bool) {
   if(some_condition) break;
 }
 ```
+
+### Switch and Case (?&:)
+Its a little finicky to explain like this, so I'll let you read the code...But basically: `?&` is one operator, no spaces in-betweeen.
+``` javascript
+some_var ?& {
+  "foo": /* some_var is "foo"! */ /;
+  "bar": /* some_var is "bar"! */ /;
+  : /* some_var is neither "foo" or "bar"... */;
+}
+```
+in javascript:
+``` javascript
+switch(some_var) {
+  case "foo": /* some_var is "foo"! */ break;
+  case "bar": /* some_var is "bar"! */ break;
+  default: /* some_var is neither "foo" or "bar"... */
+}
