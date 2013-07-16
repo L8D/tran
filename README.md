@@ -67,11 +67,11 @@ object_name.method_name() // returns "returned value from the method"
 ```
 
 ### Loops and Breaks (^ /)
-Because anything other than while loops are for sissies.
-```
+Because anything other than while loops are for sissies. Also a `/` is a break, and automatically implies a semi-colon
+``` javascript
 bool ^ {
   // will be rerun until bool == false or loop is broken
-  some_condition ? /;
+  some_condition ? /
 }
 ```
 to...
@@ -86,9 +86,9 @@ while(bool) {
 Its a little finicky to explain like this, so I'll let you read the code...But basically: `?&` is one operator, no spaces in-betweeen.
 ``` javascript
 some_var ?& {
-  "foo": /* some_var is "foo"! */ /;
-  "bar": /* some_var is "bar"! */ /;
-  : /* some_var is neither "foo" or "bar"... */;
+  "foo": /* some_var is "foo"! */ /
+  "bar": /* some_var is "bar"! */ /
+  : /* some_var is neither "foo" or "bar"... */
 }
 ```
 in javascript:
