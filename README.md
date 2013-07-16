@@ -7,7 +7,7 @@ So far, I have yet to actually make an interpreter or copmiler for it, but it's 
 ### Code blocks
 In most cases when you see a simple set of `{}`s it means something like: `function(){ ... }()` in order to compress that block down to one instruction.
 
-### If, else if, and else
+### If, else if, and else (?:)
 Conditional statements are only ternary conditional expressions.
 
 ``` javascript
@@ -27,5 +27,57 @@ if(bool) {
   // code for if another_bool is true
 } else {
   // code for if neither another_bool nor bool are true
+}
+```
+
+### Functions (->)
+Functions in tran almost mock coffeescript. Also the `return` keyword is `<-`.
+``` javascript
+function_name = (parameters) -> {
+  -> return_value;
+}
+```
+Converts(although akwardly) to:
+``` javascript
+var function_name = function(parameters) {
+  return return_value;
+}
+```
+
+### Objects (={})
+Objects in Tran are very closely like javascript objects, although instead of using `:`s for defining attributes, it simply just uses the standard `=`.
+``` javascript
+object_name = {
+  method_name = (-><- "returned value from the method";),
+  attribute = 10
+}
+
+object_name.attribute // returns 10
+object_name.method_name() // returns "returned value from the method"
+```
+Will look like:
+``` javascript
+object_name = {
+  "method_name": function() { return "returned value from the method"; },
+  attribute = 10
+}
+
+object_name.attribute // returns 10
+object_name.method_name() // returns "returned value from the method"
+```
+
+### Loops and Breaks (^ /)
+Because anything other than while loops are for sissies.
+``` javascript
+bool ^ {
+  // will be rerun until bool == false or loop is broken
+  some_condition ? /;
+}
+```
+to...
+``` javascript
+while(bool) {
+  // will be rerun until bool == false or loop is broken
+  if(some_condition) break;
 }
 ```
