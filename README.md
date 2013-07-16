@@ -2,7 +2,7 @@ Tran
 ====
 Tran is a programming language inspired by ternary operators like `?:`. Besides a standard library for interfacing with `std{in,out}` and such, the entire language consists of no "words".
 
-So far, I have yet to actually make an interpreter or copmiler for it, but it's *so far* rules are as follows with example output code in Javascript.
+So far, I have yet to actually make an interpreter or compiler for it, but it's *so far* rules are as follows with example output code in Javascript.
 
 ### Code blocks
 In most cases when you see a simple set of `{}`s it means something like: `function(){ ... }()` in order to compress that block down to one instruction.
